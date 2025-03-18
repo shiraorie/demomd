@@ -1,6 +1,7 @@
-### Наша задача разными схэмами обмануть эту гребаную лабалаторку :rocket:
+### Наша задача разны1ми схэмами обмануть эту гребаную лабалаторку :rocket:123
+{{hqRtr.hostname}}
 
-
+123
 ![image](https://github.com/user-attachments/assets/e7485aff-1f4f-405d-8f19-3b5c757c3dd4)
 
 ![image](https://github.com/user-attachments/assets/b98e16b5-2f6b-4a10-bdd5-fc3c31b0f139)

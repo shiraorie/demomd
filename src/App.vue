@@ -19,7 +19,11 @@
     </header>
     <main class="tw-app-main">
       <div class="tw-container">
-        <Main />
+        <router-view v-slot="{ Component }">
+          <transition name="fade" mode="out-in">
+            <component :is="Component" />
+          </transition>
+        </router-view>
       </div>
     </main>
     <footer class="tw-app-footer">
@@ -69,7 +73,6 @@ $tw-font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 
 }
 
 html, body {
-  height: 100%;
   font-family: $tw-font-sans;
   font-size: 16px;
   line-height: 1.5;
@@ -80,6 +83,7 @@ html, body {
 // Контейнер для центрирования контента
 .tw-container {
   width: 100%;
+  overflow: visible;
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 16px;
@@ -189,4 +193,15 @@ html, body {
     justify-content: center;
   }
 }
+</style>
+
+<style lang="sass">
+.fade-enter-active,
+.fade-leave-active
+  transition: opacity 0.3s ease, transform 0.3s ease
+
+.fade-enter-from,
+.fade-leave-to
+  opacity: 0
+  transform: translateY(10px)
 </style>
