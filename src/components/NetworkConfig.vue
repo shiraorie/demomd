@@ -235,6 +235,9 @@
       </div>
     </div>
 
+    <!-- Утилита расчета маски подсети -->
+    <NetmaskCalculator />
+    
     <div class="config-actions">
       <button class="button primary" @click="updateConfig">Применить конфигурацию</button>
       <button class="button secondary" @click="resetConfig">Сбросить</button>
@@ -244,9 +247,13 @@
 
 <script>
 import { useNetworkConfigStore } from '../store/NetworkConfig';
+import NetmaskCalculator from './netmask.vue'; // Импортируем новый компонент
 
 export default {
   name: 'NetworkConfig',
+  components: {
+    NetmaskCalculator // Добавляем компонент в список компонентов
+  },
   setup() {
     const store = useNetworkConfigStore();
     const localConfig = store.config;
